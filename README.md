@@ -1,2 +1,2 @@
 # CodeMantys.github.io
-silran coin public website
+Code Mantys
